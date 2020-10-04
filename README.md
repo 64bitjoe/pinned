@@ -1,5 +1,4 @@
 # pinned 📍
-WorkDriv 2.0
 <p align="center">
   <img src="https://joeis.us/assets/img/pinnedIconRounded.png" width="100" >
 
