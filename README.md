@@ -1,7 +1,7 @@
 # pinned
 WorkDriv 2.0
 <p align="center">
-  <img src="sftp://joeis.us:21098//home/joeienln/public_html/assets/img/pinnedIconRounded.png" width="100" >
+  <img src="https://joeis.us:21098//home/joeienln/public_html/assets/img/pinnedIconRounded.png" width="100" >
 
 You've got a fast car. So Navigate faster!
 Save up to three locations to navigate to with apple maps!
