@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pinned" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xcy-aU-gXW">
+                                <rect key="frame" x="20" y="832" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Spot 1"/>
+                                    <segment title="Spot 2"/>
+                                    <segment title="Spot 3"/>
+                                </segments>
+                                <connections>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="M4k-S9-Euz"/>
+                                </connections>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bZE-l7-VUi">
+                                <rect key="frame" x="30" y="207.5" width="359" height="157"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOJ-As-uUV">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Home" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QjS-74-h0a">
+                                        <rect key="frame" x="0.0" y="21.5" width="359" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street Adress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfE-X1-Lx6">
+                                        <rect key="frame" x="0.0" y="63.5" width="359" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1 Cherry St. New York 1001" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xpy-n2-mWo">
+                                        <rect key="frame" x="0.0" y="85" width="359" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
+                                        <connections>
+                                            <action selector="streetAdressAdded:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="X6b-Z2-2JU"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="328-L3-pSe">
+                                        <rect key="frame" x="0.0" y="127" width="359" height="30"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QeZ-en-LOI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0rB-bg-bsd">
+                                <rect key="frame" x="20" y="403" width="374" height="413"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dK4-ng-aTF"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinned" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2Y-lv-2dV">
+                                <rect key="frame" x="30" y="77" width="138.5" height="50.5"/>
+                                <color key="tintColor" name="FGTint"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
+                                <color key="textColor" name="FGTint"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jyx-Qu-zYH">
+                                <rect key="frame" x="279" y="63" width="100.5" height="100.5"/>
+                                <color key="tintColor" name="FGTint"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100.5" id="atX-6c-uwl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="BGTint"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jyx-Qu-zYH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="8VS-fF-eOT"/>
+                            <constraint firstItem="bZE-l7-VUi" firstAttribute="leading" secondItem="c2Y-lv-2dV" secondAttribute="leading" id="Bot-m5-ma9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jyx-Qu-zYH" secondAttribute="trailing" constant="14.5" id="ELc-9J-rPY"/>
+                            <constraint firstItem="c2Y-lv-2dV" firstAttribute="centerY" secondItem="jyx-Qu-zYH" secondAttribute="centerY" constant="-11" id="Hbt-R4-F6F"/>
+                            <constraint firstItem="0rB-bg-bsd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jne-qX-GFq"/>
+                            <constraint firstItem="0rB-bg-bsd" firstAttribute="leading" secondItem="Xcy-aU-gXW" secondAttribute="leading" id="RCP-51-K7a"/>
+                            <constraint firstItem="jyx-Qu-zYH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c2Y-lv-2dV" secondAttribute="trailing" constant="8" symbolic="YES" id="RMw-3H-r4d"/>
+                            <constraint firstItem="c2Y-lv-2dV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="V0S-ev-I5d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bZE-l7-VUi" secondAttribute="trailing" constant="5" id="a4u-70-uCk"/>
+                            <constraint firstItem="0rB-bg-bsd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cRg-iY-jJu"/>
+                            <constraint firstItem="0rB-bg-bsd" firstAttribute="top" secondItem="bZE-l7-VUi" secondAttribute="bottom" constant="38.5" id="dhm-Op-G0d"/>
+                            <constraint firstItem="0rB-bg-bsd" firstAttribute="trailing" secondItem="Xcy-aU-gXW" secondAttribute="trailing" id="dnE-65-ZOI"/>
+                            <constraint firstItem="bZE-l7-VUi" firstAttribute="top" secondItem="jyx-Qu-zYH" secondAttribute="bottom" constant="44" id="g9J-HM-TzH"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Xcy-aU-gXW" secondAttribute="bottom" constant="-1" id="kM8-C4-f0d"/>
+                            <constraint firstItem="c2Y-lv-2dV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="xlg-6p-EV9"/>
+                            <constraint firstItem="Xcy-aU-gXW" firstAttribute="top" secondItem="0rB-bg-bsd" secondAttribute="bottom" constant="16" id="zoP-d5-T5d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SpotControl" destination="Xcy-aU-gXW" id="uKf-SH-HqK"/>
+                        <outlet property="carImage" destination="jyx-Qu-zYH" id="shy-Kd-QP5"/>
+                        <outlet property="labelText" destination="QjS-74-h0a" id="l5p-RF-a6H"/>
+                        <outlet property="mapView" destination="0rB-bg-bsd" id="pDf-lu-06v"/>
+                        <outlet property="streetLabel" destination="xpy-n2-mWo" id="odJ-2z-Ebo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.333333333333336" y="30.803571428571427"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BGTint">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="FGTint">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

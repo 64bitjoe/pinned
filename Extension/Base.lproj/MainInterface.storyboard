@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="Extension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="pqK-dZ-JuC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGh-GE-IK3">
+                                        <rect key="frame" x="0.0" y="0.0" width="105.5" height="68"/>
+                                        <state key="normal" image="apple"/>
+                                        <connections>
+                                            <action selector="gotoapple:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Jjc-Uh-4Jg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOY-ce-t07">
+                                        <rect key="frame" x="107.5" y="0.0" width="105" height="68"/>
+                                        <state key="normal" image="home"/>
+                                        <connections>
+                                            <action selector="goHome:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="enf-Gd-Lqd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fv9-0Z-yYp">
+                                        <rect key="frame" x="214.5" y="0.0" width="105.5" height="68"/>
+                                        <state key="normal" image="starbucks"/>
+                                        <connections>
+                                            <action selector="gotostbx:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="krr-ru-RQT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lOY-ce-t07" firstAttribute="width" secondItem="hGh-GE-IK3" secondAttribute="width" id="R69-4U-yNt"/>
+                                    <constraint firstItem="Fv9-0Z-yYp" firstAttribute="width" secondItem="hGh-GE-IK3" secondAttribute="width" id="cdM-qX-EjH"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pqK-dZ-JuC" secondAttribute="trailing" id="SeM-YB-7La"/>
+                            <constraint firstItem="pqK-dZ-JuC" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="XaZ-Qf-f36"/>
+                            <constraint firstItem="pqK-dZ-JuC" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="vys-gt-HFl"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="68"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748.79999999999995" y="226.6866566716642"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="apple" width="140" height="68"/>
+        <image name="home" width="140" height="68"/>
+        <image name="starbucks" width="140" height="68"/>
+    </resources>
+</document>
