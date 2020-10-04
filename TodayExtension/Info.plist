@@ -30,25 +30,25 @@
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconTypeDate</string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>Home</string>
+			<string>Location 1</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>us.joeis.Home</string>
+			<string>us.joeis.Loc0</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconTypeDate</string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>Starbucks</string>
+			<string>Location 2</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>us.joeis.Starbucks</string>
+			<string>us.joeis.Loc1</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconTypeDate</string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>Apple</string>
+			<string>Location 3</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>us.joeis.Apple</string>
+			<string>us.joeis.Loc2</string>
 		</dict>
 	</array>
 	<key>UILaunchStoryboardName</key>

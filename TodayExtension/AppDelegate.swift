@@ -40,18 +40,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-       if shortcutItem.type == "us.joeis.Home" {
+       if shortcutItem.type == "us.joeis.Loc0" {
          let myAddress = "31,Arden+St,New+Haven,CT,06512,USA"
         if let url = URL(string:"http://maps.apple.com/?address=\(myAddress)") {
             UIApplication.shared.open(url)
         }
         
         
-        } else if shortcutItem.type == "us.joeis.Starbucks" {
+        } else if shortcutItem.type == "us.joeis.Loc1" {
         
-         let myAddress = "6,North+Main+St,Branfrod,CT,06405,USA"
             let adress0 =  UserDefaults.standard.object(forKey: "spot0name") as! String
-        if let url = URL(string:"http://maps.apple.com/daddr=\(myAddress)") {
+        if let url = URL(string:"http://maps.apple.com/daddr=\(adress0)") {
             UIApplication.shared.open(url)
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url)
@@ -60,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     
-       } else if shortcutItem.type == "us.joeis.Apple" {
+       } else if shortcutItem.type == "us.joeis.Loc2" {
         
          let myAddress = "100,Howe+St,New+Haven,CT,06511,USA"
         if let url = URL(string:"http://maps.apple.com/?address=\(myAddress)") {
