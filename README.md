@@ -14,14 +14,14 @@ Save up to three locations to navigate to with apple maps! 🗺
 * Custom images
 * iOS 14 Widget
 * iOS 13 widget (Depricate)
-* Nil Data Check 
+* Check for nil data, with error protection.
 * Better UI For saving
-* And So much more.. Hey its still early in development
+* And So much more.. Hey its still early in development!
 
 ## Where to find me!
  * [Website](https://joeis.us)
- * [Find me on Twitter](twitter.com/64bitjoe)
- * [Find me on Insta](Instagram.com/64bitjoe)
+ * [Find me on Twitter](https://www.twitter.com/64bitjoe)
+ * [Find me on Instagram](https://www.instagram.com/64bitjoe)
  
 
 </p>
